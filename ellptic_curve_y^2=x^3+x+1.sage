@@ -23,6 +23,7 @@ x^3+x+1
 a^(2^3)
 
 #find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
+print("Finding zeros of f(x,y)=y^2-x^3-x-1 ...")
 [g(0,0),g(1,0),g(0,1),g(1,1),g(a,0),g(a,1),g(a,a),g(a,a^2),g(a,a^3)]
 
 #perform a grid search for points over F_8
@@ -55,7 +56,6 @@ for n in range(1,N):
 
 #let's examine the algebraic variety E3 over the finite field F_7, and compute an approximation of the Zeta function
 var('T')
-print(T)
 def zeta(q,T):
     return sum(exp(number_of_points_over_extensions_of_F_7[n]*T**n/n) for n in range(1,N-2))
 
@@ -68,4 +68,4 @@ def zeta_silverman(q,T):
     return (1-alpha*T)*(1-beta*T)/((1-T)*(1-q*T))
 
 #computes the Zeta function of y^2=x^3+x+1 over F_7
-zeta_silverman(7,T)
+print(zeta_silverman(7,T))
