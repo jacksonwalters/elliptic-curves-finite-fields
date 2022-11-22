@@ -31,7 +31,7 @@ for i in range(8):
     for j in range(8):
         if g(a^i,a^j) == 0:
             solutions_over_F_8.append((i,j))
-solutions_over_F_8
+print(solutions_over_F_8)
 
 #evaluate curve over F_7
 E2=EllipticCurve(GF(7), [0,0,0,1,1])
