@@ -10,7 +10,7 @@ E.torsion_points()
 
 #we can still compute the number of points over extensions F_2.
 #let's compute for fields where the exponent m of 2^m divides the exponent n of 2^n
-#evaluate curve over F_7
+#evaluate curve over extensions of F_2
 def f(x,y):
     return y^2-x^3+x+1
 
