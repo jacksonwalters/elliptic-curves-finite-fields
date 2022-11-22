@@ -39,6 +39,8 @@ E2=EllipticCurve(GF(7), [0,0,0,1,1])
 #compute number of points
 E2.order()
 
-#the Zeta function over F_7 is a rational function of T. What is it?
+#the Zeta function over F_7 is a rational function of T. What is it? Only need q^n for all n.
+#for algebraic closure of F_7, \union_{m|n}F_7^m. Dylan? Communit seminar?
+#dividing_exponents_seven = [7^1,7^2,7^4,7^8]
 for n in range(1,10):
     print(EllipticCurve(GF(7^n), [0,0,0,1,1]).order())
