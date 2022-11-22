@@ -59,4 +59,4 @@ var(T)
 def zeta(q,T):
     return sum(exp(number_of_points_over_extensions_of_F_7[n]*T**n/n) for n in range(1,N))
 
-zeta(7,T)
+#zeta(7,T) = (1-\alpha*T)(1-\beta*T)/((1-T)*(1-qT)) thanks to Joe Silverman.
