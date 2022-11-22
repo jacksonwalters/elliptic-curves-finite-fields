@@ -65,4 +65,4 @@ def zeta(q,T):
 alpha = (3+sqrt(19)*i)/14
 beta = (3-sqrt(19)*i)/14
 def zeta_silverman(q,T):
-    return (1-alpha*T)(1-beta*T)/((1-T)*(1-qT))
+    return (1-alpha*T)*(1-beta*T)/((1-T)*(1-q*T))
