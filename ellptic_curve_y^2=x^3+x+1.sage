@@ -66,3 +66,6 @@ alpha = (3+sqrt(19)*i)/14
 beta = (3-sqrt(19)*i)/14
 def zeta_silverman(q,T):
     return (1-alpha*T)*(1-beta*T)/((1-T)*(1-q*T))
+
+#computes the Zeta function of y^2=x^3+x+1 over F_7
+zeta_silverman(7,T)
