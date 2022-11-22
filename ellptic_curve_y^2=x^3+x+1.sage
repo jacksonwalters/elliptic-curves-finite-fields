@@ -57,4 +57,5 @@ N=len(number_of_points_over_extensions_of_F_7)
 def zeta(q,T):
     return sum(exp(number_of_points_over_extensions_of_F_7[n]) for n in range(N))
 
-zeta("","")
+T = var('T')
+zeta(7,T)
