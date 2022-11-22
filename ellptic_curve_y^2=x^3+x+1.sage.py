@@ -20,6 +20,7 @@ def g(x,y):
     return y**_sage_const_2 -x**_sage_const_3 +x+_sage_const_1 
 
 #find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
+print(g(a,a))
 
 #arithmetic over field extensions of F_2
 P = PolynomialRing(GF(_sage_const_2 ), names=('x',)); (x,) = P._first_ngens(1)

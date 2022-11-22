@@ -14,9 +14,6 @@ E.torsion_points()
 def g(x,y):
     return y^2-x^3+x+1
 
-#find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
-print g(a,a)
-
 #arithmetic over field extensions of F_2
 P.<x> = PolynomialRing(GF(2))
 f = x^3 + x + 1 # Fano Polynomial
@@ -24,6 +21,9 @@ k.<a> = GF(2^3, modulus=f)
 k.modulus()
 x^3+x+1
 a^(2^3)
+
+#find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
+print(g(a,a))
 
 #evaluate curve over F_7
 E2=EllipticCurve(GF(7), [0,0,0,1,1])
