@@ -26,9 +26,12 @@ a^(2^3)
 [g(0,0),g(1,0),g(0,1),g(1,1),g(a,0),g(a,1),g(a,a),g(a,a^2),g(a,a^3)]
 
 #perform a grid search for points over F_8
+solutions_over_F_8 = []
 for i in range(8):
     for j in range(8):
-        print(g(a^i,a^j))
+        if g(a^i,a^j) == 0:
+            solutions_over_F_8.append((i,j))
+solutions_over_F_8
 
 #evaluate curve over F_7
 E2=EllipticCurve(GF(7), [0,0,0,1,1])
