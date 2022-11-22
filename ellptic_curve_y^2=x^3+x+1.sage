@@ -15,6 +15,7 @@ def g(x,y):
     return y^2-x^3+x+1
 
 #find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
+print g(a,a)
 
 #arithmetic over field extensions of F_2
 P.<x> = PolynomialRing(GF(2))
