@@ -40,3 +40,5 @@ E2=EllipticCurve(GF(7), [0,0,0,1,1])
 E2.order()
 
 #the Zeta function over F_7 is a rational function of T. What is it?
+for n in range(1,10):
+    print(EllipticCurve(GF(7^n), [0,0,0,1,1]).order())
