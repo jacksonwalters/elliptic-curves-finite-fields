@@ -10,8 +10,8 @@ E.torsion_points()
 
 #we can still compute the number of points over extensions F_2.
 #let's compute for fields where the exponent m of 2^m divides the exponent n of 2^n
-#evaluate curve over extensions of F_2
-def f(x,y):
+#find points of curve over extensions of F_2^1, e.g. F_2^2=4, F_2^4=16, F_2^5=32
+def g(x,y):
     return y^2-x^3+x+1
 
 #find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
