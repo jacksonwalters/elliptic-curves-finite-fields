@@ -1,11 +1,9 @@
 # elliptic-curves-finite-fields
-Computing the rank and torsion of x^3+x+1 over \QQ.
+Computing the rank and torsion of the elliptic curve y^2=x^3+x+1 over \QQ.
 
-Need to compute the j-invariant of the curve over \CC.
+Need to compute the j-invariant of the elliptic curve over \CC.
 
-Computing the number of points for the (non-elliptic, singular) curve over extensions of F_2.
-
-I will label this integer sequence n_{2,x^3+x+1}.
+Computing the number of points for the (non-elliptic, singular) curve over extensions of F_2. I will label this integer sequence n_{2,x^3+x+1}.
 
 Can compute the number of points of the elliptic curve over F_7, F_49, i.e. extensions of all degree.
 
