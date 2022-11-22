@@ -38,3 +38,5 @@ E2=EllipticCurve(GF(7), [0,0,0,1,1])
 
 #compute number of points
 E2.order()
+
+#the Zeta function over F_7 is a rational function of T. What is it?

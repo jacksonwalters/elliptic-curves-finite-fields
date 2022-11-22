@@ -36,7 +36,7 @@ for i in range(_sage_const_8 ):
     for j in range(_sage_const_8 ):
         if g(a**i,a**j) == _sage_const_0 :
             solutions_over_F_8.append((i,j))
-solutions_over_F_8
+print(solutions_over_F_8)
 
 #evaluate curve over F_7
 E2=EllipticCurve(GF(_sage_const_7 ), [_sage_const_0 ,_sage_const_0 ,_sage_const_0 ,_sage_const_1 ,_sage_const_1 ])
