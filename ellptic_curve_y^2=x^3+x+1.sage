@@ -53,5 +53,6 @@ for n in range(1,100):
 #What are the complex numbers \alpha and \beta?
 
 #let's examine the algebraic variety E3 over the finite field F_7, and compute an approximation of the Zeta function
-def zeta(q,T):
-    exp(1)
+N=len(number_of_points_over_extensions_of_F_7)
+def zeta():
+    return sum(exp(number_of_points_over_extensions_of_F_7[n]) for n in range(N))
