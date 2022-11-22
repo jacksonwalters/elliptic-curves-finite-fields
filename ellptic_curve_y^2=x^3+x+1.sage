@@ -40,7 +40,7 @@ E2=EllipticCurve(GF(7), [0,0,0,1,1])
 E2.order()
 
 #the Zeta function over F_7 is a rational function of T. What is it? Only need q^n for all n.
-#for algebraic closure of F_7, \union_{m|n}F_7^m. Dylan? Communit seminar?
+#for algebraic closure of F_7, \union_{m|n}F_7^m. Dylan Yott? Community seminar? Is this a bug?
 #dividing_exponents_seven = [7^1,7^2,7^4,7^8]
 #Rob: the number of points over 7^n are determined by the number of points over F_7, and \alpha, \beta
 number_of_points_over_extensions_of_F_7 = []
