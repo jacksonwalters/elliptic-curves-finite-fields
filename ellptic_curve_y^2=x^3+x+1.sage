@@ -51,3 +51,7 @@ for n in range(1,100):
 #the shape of the Zeta function should be something like (1-\alpha*T)*(1-\beta*T)/((1-T)*(1-qT)) where
 #q is the order of the finite field of interest, for instance q=7^m. Setting m=1, we can look at q=7.
 #What are the complex numbers \alpha and \beta?
+
+#let's examine the algebraic variety E3 over the finite field F_7, and compute an approximation of the Zeta function
+def zeta(q,T):
+    exp(1)
