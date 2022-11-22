@@ -12,3 +12,5 @@ Can compute the number of points of the elliptic curve over F_7, F_49, i.e. exte
 Would like to compute the Zeta function over F_7 to verify the Weil conjectures.
 
 Looking for more information on the curve y^2=x^3+x+1 over the algebraic closure of F_2, \overline{F_2}.
+
+Acknowledgements: Joe Silverman, Robert Pollack, Angus McAndrew, Miss Sara Jane Bishop III.
