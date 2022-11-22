@@ -14,6 +14,14 @@ E.torsion_points()
 def f(x,y):
     return y^2-x^3+x+1
 
+  #arithmetic over field extensions of F_2
+P.<x> = PolynomialRing(GF(2))
+f = x^3 + x + 1 # Fano Polynomial
+k.<a> = GF(2^3, modulus=f)
+k.modulus()
+x^3+x+1
+a^(2^3)
+
 #evaluate curve over F_7
 E2=EllipticCurve(GF(7), [0,0,0,1,1])
 
