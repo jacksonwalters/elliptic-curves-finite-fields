@@ -46,3 +46,5 @@ E2.order()
 number_of_points_over_extensions_of_F_7 = []
 for n in range(1,100):
     number_of_points_over_extensions_of_F_7+=[EllipticCurve(GF(7^n), [0,0,0,1,1]).order()]
+
+  #build the Zeta function for the finite field F_7 and the elliptic curve y^2=x^3+x+1
