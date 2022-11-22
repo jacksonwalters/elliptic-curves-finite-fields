@@ -43,5 +43,7 @@ E2.order()
 #for algebraic closure of F_7, \union_{m|n}F_7^m. Dylan? Communit seminar?
 #dividing_exponents_seven = [7^1,7^2,7^4,7^8]
 #Rob: the number of points over 7^n are determined by the number of points over F_7, and \alpha, \beta
+number_of_points_over_extensions_of_F_7 = []
 for n in range(1,20):
-    print(EllipticCurve(GF(7^n), [0,0,0,1,1]).order())
+    number_of_points_over_extensions_of_F_7+=[EllipticCurve(GF(7^n), [0,0,0,1,1]).order()]
+number_of_points_over_extensions_of_F_7
