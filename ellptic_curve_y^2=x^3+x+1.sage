@@ -43,8 +43,9 @@ E2.order()
 #for algebraic closure of F_7, \union_{m|n}F_7^m. Dylan Yott? Community seminar? Is this a bug?
 #dividing_exponents_seven = [7^1,7^2,7^4,7^8]
 #Rob: the number of points over 7^n are determined by the number of points over F_7, and \alpha, \beta
+N=100
 number_of_points_over_extensions_of_F_7 = []
-for n in range(1,100):
+for n in range(1,N):
     number_of_points_over_extensions_of_F_7+=[EllipticCurve(GF(7^n), [0,0,0,1,1]).order()]
 
 #build the Zeta function for the finite field F_7 and the elliptic curve y^2=x^3+x+1
