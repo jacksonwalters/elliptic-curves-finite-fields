@@ -28,6 +28,7 @@ x**_sage_const_3 +x+_sage_const_1
 a**(_sage_const_2 **_sage_const_3 )
 
 #find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
+print("Finding zeros of f(x,y)=y^2-x^3-x-1 ...")
 [g(_sage_const_0 ,_sage_const_0 ),g(_sage_const_1 ,_sage_const_0 ),g(_sage_const_0 ,_sage_const_1 ),g(_sage_const_1 ,_sage_const_1 ),g(a,_sage_const_0 ),g(a,_sage_const_1 ),g(a,a),g(a,a**_sage_const_2 ),g(a,a**_sage_const_3 )]
 
 #perform a grid search for points over F_8
@@ -60,7 +61,6 @@ for n in range(_sage_const_1 ,N):
 
 #let's examine the algebraic variety E3 over the finite field F_7, and compute an approximation of the Zeta function
 var('T')
-print(T)
 def zeta(q,T):
     return sum(exp(number_of_points_over_extensions_of_F_7[n]*T**n/n) for n in range(_sage_const_1 ,N-_sage_const_2 ))
 
@@ -73,5 +73,5 @@ def zeta_silverman(q,T):
     return (_sage_const_1 -alpha*T)*(_sage_const_1 -beta*T)/((_sage_const_1 -T)*(_sage_const_1 -q*T))
 
 #computes the Zeta function of y^2=x^3+x+1 over F_7
-zeta_silverman(_sage_const_7 ,T)
+print(zeta_silverman(_sage_const_7 ,T))
 
