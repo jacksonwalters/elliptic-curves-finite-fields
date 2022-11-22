@@ -61,3 +61,8 @@ def zeta(q,T):
 
 #zeta(7,T) = (1-\alpha*T)(1-\beta*T)/((1-T)*(1-qT)) thanks to Joe Silverman.
 #\alpha = (3+\sqrt{19}*i)/14, \beta = \overline{\alpha}
+#define the Zeta function using the formulas found in Silverman, pp. 140 - 144
+alpha = (3+sqrt(19)*i)/14
+beta = (3-sqrt(19)*i)/14
+def zeta_silverman(q,T):
+    return (1-alpha*T)(1-beta*T)/((1-T)*(1-qT))
