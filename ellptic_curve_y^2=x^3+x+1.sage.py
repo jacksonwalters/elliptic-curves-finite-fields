@@ -19,9 +19,6 @@ E.torsion_points()
 def g(x,y):
     return y**_sage_const_2 -x**_sage_const_3 +x+_sage_const_1 
 
-#find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
-print(g(a,a))
-
 #arithmetic over field extensions of F_2
 P = PolynomialRing(GF(_sage_const_2 ), names=('x',)); (x,) = P._first_ngens(1)
 f = x**_sage_const_3  + x + _sage_const_1  # Fano Polynomial
@@ -29,6 +26,9 @@ k = GF(_sage_const_2 **_sage_const_3 , modulus=f, names=('a',)); (a,) = k._first
 k.modulus()
 x**_sage_const_3 +x+_sage_const_1 
 a**(_sage_const_2 **_sage_const_3 )
+
+#find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
+print(g(a,a))
 
 #evaluate curve over F_7
 E2=EllipticCurve(GF(_sage_const_7 ), [_sage_const_0 ,_sage_const_0 ,_sage_const_0 ,_sage_const_1 ,_sage_const_1 ])

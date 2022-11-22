@@ -23,7 +23,7 @@ x^3+x+1
 a^(2^3)
 
 #find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
-print(g(a,a))
+[g(0,0),g(1,0),g(0,1),g(1,1),g(a,0),g(a,1),g(a,a),g(a,a^2),g(a,a^3)]
 
 #evaluate curve over F_7
 E2=EllipticCurve(GF(7), [0,0,0,1,1])
