@@ -17,7 +17,7 @@ def g(x,y):
 #arithmetic over field extensions of F_2
 P.<x> = PolynomialRing(GF(2))
 f = x^3 + x + 1 # Fano Polynomial
-k.<a> = GF(2^3, modulus=f)
+k.<a> = GF(2^3, modulus=f
 k.modulus()
 x^3+x+1
 a^(2^3)
