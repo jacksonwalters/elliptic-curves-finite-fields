@@ -5,14 +5,19 @@ E.rank()
 #compute torsion points
 E.torsion_points()
 
-#curve is singular over F_2
-#E2=EllipticCurve(GF(2), [0,0,0,1,1])
+#curve is not smooth over F_2, so not elliptic
+#E2=EllipticCurve(GF(2), [0,0,0,1,1]) returns an error appropriately
+#it has a singularity at the origin since both partial derivatives vanish there
 
 #we can still compute the number of points over extensions F_2.
 #let's compute for fields where the exponent m of 2^m divides the exponent n of 2^n
 #find points of curve over extensions of F_2^1, e.g. F_2^2=4, F_2^4=16, F_2^5=32
 def g(x,y):
     return y^2-x^3+x+1
+
+#after the change of variables x->x+1, y->y+1, we obtain the curve y^2=x^2(x+1)
+Q.<x,y> = PolynomialRing(GF(2))
+show(g(x+1,y+1))
 
 #arithmetic over field extensions of F_2
 P.<x> = PolynomialRing(GF(2))
@@ -74,3 +79,6 @@ def zeta_silverman(q,T):
 #computes the Zeta function of y^2=x^3+x+1 over F_7
 print("The Zeta function of the elliptic curves y^2=x^3+x+1 over F_7 is ...")
 print(zeta_silverman(7,T))
+
+#the number of points over extensions of F_7 can be computed by evaluating the n-th derivative of the zeta function
+zeta_diff = lambda T : diff(zeta_silverman(7,T),T)
