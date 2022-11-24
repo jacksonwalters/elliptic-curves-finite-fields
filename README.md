@@ -11,4 +11,4 @@ Computes the Zeta function over F_7 to verify the Weil conjectures using explici
 
 Looking for more information on the curve y^2=x^3+x+1 over the algebraic closure of F_2, \overline{F_2}.
 
-Acknowledgements: Joe Silverman, Robert Pollack, Angus McAndrew, Roderic Corominas, and Tim Kohl.
+Acknowledgements: Ezra Brown, Joe Silverman, Robert Pollack, Angus McAndrew, Roderic Corominas, and Tim Kohl.
