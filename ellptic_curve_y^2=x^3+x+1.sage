@@ -1,19 +1,20 @@
 #elliptic curve y^2=x^3+x+1 in normal form
+#compute the rank and torsion of the curve over \QQ
 E=EllipticCurve([0,0,0,1,1])
 E.rank()
 
 #compute torsion points
 E.torsion_points()
 
-#curve is not smooth over F_2, so not elliptic
+#curve is not smooth over F_2 at the point (x,y)=(1,1), so not elliptic
+#it has a singularity since both partial derivatives vanish there
 #E2=EllipticCurve(GF(2), [0,0,0,1,1]) returns an error appropriately
-#it has a singularity at the origin since both partial derivatives vanish there
 
-#we can still compute the number of points over extensions F_2.
+#we can still compute the number of points over extensions F_2
 #let's compute for fields where the exponent m of 2^m divides the exponent n of 2^n
 #find points of curve over extensions of F_2^1, e.g. F_2^2=4, F_2^4=16, F_2^5=32
 def g(x,y):
-    return y^2-x^3+x+1
+    return y^2-x^3-x-1
 
 #after the change of variables x->x+1, y->y+1, we obtain the curve y^2=x^2(x+1)
 Q.<x,y> = PolynomialRing(GF(2))
@@ -27,20 +28,28 @@ k.modulus()
 x^3+x+1
 a^(2^3)
 
-#find zeros of f(x,y) over degree 3 field extension F_8 of F_2 \isom F_2[x]/(x^3+x+1)
-print("Finding zeros of f(x,y)=y^2-x^3-x-1 ...")
-[g(0,0),g(1,0),g(0,1),g(1,1),g(a,0),g(a,1),g(a,a),g(a,a^2),g(a,a^3)]
+#the curve is singular at the point (x,y)=(1,1)
+#as both partial derivatives \del_x g(x,y), \del_y g(x,y) vanish
+k(g(1,1))==0 and mod(1,7) != 0
 
 #perform a grid search for points over F_8
+raise_to = lambda a,k: a^k if k != oo else 0
+exponents = [i for i in range(2^3)]+[oo]
 solutions_over_F_8 = []
-for i in range(8):
-    for j in range(8):
-        if g(a^i,a^j) == 0:
-            solutions_over_F_8.append((i,j))
-print(solutions_over_F_8)
+for i in exponents:
+    for j in exponents:
+        #check that it's a point on the curve
+        if k(g(raise_to(a,i),raise_to(a,j))) == 0:
+            #check that it's not a singular point where x=1
+            if i != 0 and i!= 7:
+                solutions_over_F_8.append((i,j))
+solutions_over_F_8
 
 #evaluate curve over F_7
 E2=EllipticCurve(GF(7), [0,0,0,1,1])
+
+#compute the points over F_7
+E2.points()
 
 #compute number of points
 E2.order()
